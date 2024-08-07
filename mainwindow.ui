@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>805</width>
+    <height>876</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(114, 159, 207);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStatusBar" name="statusbar_2">
+    <property name="geometry">
+     <rect>
+      <x>-70</x>
+      <y>140</y>
+      <width>3</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>170</y>
+      <width>641</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+    background-color: rgb(26,26,42); /* Cornflower Blue background */
+    color: rgb(255,255,255); /* Black text */
+    gridline-color: rgb(255,255,255); /* Black grid lines */
+    font-family: Arial, sans-serif; /* Modern, clean font */
+}
+QHeaderView::section {
+    background-color: rgb(65, 105, 225); /* Royal Blue header background */
+    color: rgb(255,255,255); /* White text for headers */
+    font-weight: bold; /* Bold text for headers */
+    border: 1px solid rgb(255, 255, 255); /* White border for headers */
+}
+QTableWidget::item:alternate {
+    background-color: rgb(173, 216, 230); /* Light Blue for alternate rows */
+}
+
+QTableWidget::item:selected {
+    background-color: rgb(255, 215, 0); /* Gold for selected items */
+    color: rgb(0, 0, 0); /* Black text for selected items */
+}
+
+QTableWidget::item:hover {
+    background-color: rgb(135, 206, 250); /* Light Sky Blue for hovered items */
+}
+</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>108</number>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="pushButtonFetch">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>10</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*background-color: rgb(255, 132, 77);*/
+QPushButton {
+    background-color: rgb(255, 132, 77); /* Orange background */
+    color: rgb(0, 0, 0); /* Black text */
+    border: 2px solid rgb(205, 92, 92); /* Indian Red border */
+    padding: 10px 20px; /* Padding for better appearance */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 69, 0); /* Red-Orange on hover */
+}
+
+QPushButton:focus {
+    border-color: rgb(255, 255, 255); /* White border on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional shadow on focus */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Fetch Details</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>152</x>
+      <y>11</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0,0,0);</string>
+       </property>
+       <property name="text">
+        <string>Train Number</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditTrainNumber">
+       <property name="toolTip">
+        <string>Please Enter Valid Train No</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/*background-color: rgb(158, 109, 97,0%);*/
+ background-color: rgba(255, 255, 255, 0.8);
+color: rgb(0, 0, 0);
+border: 1px solid rgb(100, 100, 100);
+ padding: 5px;
+ border-radius: 5px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter Train Number</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>110</y>
+      <width>421</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0,0,0);</string>
+       </property>
+       <property name="text">
+        <string>Last Updated :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelUpdatedTime">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0,0,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>60</y>
+      <width>531</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0,0,0);</string>
+       </property>
+       <property name="text">
+        <string>Train No and Name :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelTrainName">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0,0,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelCurrentDateTime">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
+      <width>441</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>805</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
